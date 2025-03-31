@@ -1,15 +1,22 @@
 import 'package:first_my_project/circuler_avtar1.dart';
+import 'package:first_my_project/doctor_page1.dart';
+import 'package:first_my_project/dr_ui1.dart';
 import 'package:first_my_project/ecommerce_project1.dart';
+import 'package:first_my_project/fancy_ui.dart';
 import 'package:first_my_project/flutter_ui.dart';
+import 'package:first_my_project/ginder_project.dart';
 import 'package:first_my_project/home_screen.dart';
-
 import 'package:first_my_project/login_ui.dart';
 import 'package:first_my_project/mutual_fund1.dart';
 import 'package:first_my_project/playstore_ui.dart';
+import 'package:first_my_project/practice.dart';
+import 'package:first_my_project/stack_wigets.dart';
+import 'package:first_my_project/text_form.dart';
 import 'package:first_my_project/text_widget1.dart';
+import 'package:first_my_project/textform3.dart';
+import 'package:first_my_project/textui.dart';
 import 'package:first_my_project/ui_design1.dart';
-import 'package:first_my_project/ui_design2.dart';
-import 'package:first_my_project/ui_design3.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,7 +49,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:MutualFund1(),
+      home:EcommerceProject1(),
     );
   }
 }

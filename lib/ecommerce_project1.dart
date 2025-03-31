@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
 class EcommerceProject1 extends StatelessWidget {
@@ -9,233 +11,194 @@ class EcommerceProject1 extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xffffffff),
         body: SafeArea(
-          child: Column(
+          child: Stack(
             children: [
-              Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: Color(0xffe5e9ea),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("images/profaile.png"),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.28,
+                width: MediaQuery.of(context).size.width,
+
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(25),
+                    bottomRight: Radius.circular(25),
                   ),
-                  Column(
-                    children: [
-                      Text("Good morning", style: TextStyle(fontSize: 13)),
-                      Text(
-                        'Amelia barlow',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 120),
-                                padding: EdgeInsets.all(10),
-                                height: 42,
-                                width: 120,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfffffeff),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Row(
+                  color: Color(0xfff4f5f7),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset("images/Drdp.png"),
+                        ),
+                        SizedBox(width: 4),
+
+                        Column(
+                          children: [
+                            Text(
+                              "Good morning",
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Text(
+                              'Amelia barlow',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Row(
                                   children: [
-                                    Icon(
-                                      Icons.location_on,
-                                      color: Colors.green,
-                                    ),
-                                    Text(
-                                      "My Flat",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12,
+                                    Container(
+                                      margin: EdgeInsets.only(left: 120),
+                                      padding: EdgeInsets.all(10),
+                                      height: 42,
+                                      width: 120,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xfffffeff),
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.green,
+                                          ),
+                                          Text(
+                                            "My Flat",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                          Icon(Icons.arrow_drop_down),
+                                        ],
                                       ),
                                     ),
-                                    Icon(Icons.arrow_drop_down),
                                   ],
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    height: 50,
-                    width: 370,
-                    decoration: BoxDecoration(
-                      color: Color(0xffffffff),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      children: [
-                        Icon(Icons.search, color: Colors.green),
-                        Text(
-                          "Search category",
-                          style: TextStyle(fontWeight: FontWeight.w200),
+                              ],
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Container(
-                    height: 180,
-                    width: 380,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      height: 50,
+                      width: 370,
+                      decoration: BoxDecoration(
+                        color: Color(0xffffffff),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.search, color: Colors.green),
+                          Text(
+                            "Search category",
+                            style: TextStyle(fontWeight: FontWeight.w200),
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Image.asset('images/get25.png'),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
+                    SizedBox(height: 20),
+                    Image.asset('images/get25.png'),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text(
                           "Categories",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
-                      ),
 
-                      Icon(
-                        Icons.emoji_emotions_outlined,
-                        color: Colors.amber,
-                        size: 18,
-                      ),
-                      SizedBox(width: 230),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
+                        Icon(
+                          Icons.emoji_emotions_outlined,
+                          color: Colors.amber,
+                          size: 18,
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Color(0xfff4f5f7),
-                            child: Image.asset('images/apple.png'),
+                        Spacer(),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            "Fruit",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 35,
-                                    backgroundColor: Color(0xfff4f5f7),
-                                    child: Image.asset('images/vegetables.png'),
-                                  ),
-                                  Text(
-                                    "vegetables",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 35,
-                                    backgroundColor: Color(0xfff4f5f7),
-                                    child: Image.asset('images/Diary.png'),
-                                  ),
-                                  Text(
-                                    "Diary",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 35,
-                                    backgroundColor: Color(0xfff4f5f7),
-                                    child: Image.asset('images/meat.png'),
-                                  ),
-                                  Text(
-                                    "Meat",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  children: [
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            CircleAvatar(
+                              radius: 35,
+                              backgroundColor: Color(0xfff4f5f7),
+                              child: Image.asset('images/apple.png'),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Fruit",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            CircleAvatar(
+                              radius: 35,
+                              backgroundColor: Color(0xfff4f5f7),
+                              child: Image.asset('images/vegetables.png'),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "vegetables",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            CircleAvatar(
+                              radius: 35,
+                              backgroundColor: Color(0xfff4f5f7),
+                              child: Image.asset('images/Diary.png'),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Diary",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            CircleAvatar(
+                              radius: 35,
+                              backgroundColor: Color(0xfff4f5f7),
+                              child: Image.asset('images/meat.png'),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Meat",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 15),
                     Row(
                       children: [
                         Text(
@@ -247,7 +210,7 @@ class EcommerceProject1 extends StatelessWidget {
                         ),
 
                         Icon(Icons.whatshot, color: Colors.red),
-                        SizedBox(width: 220),
+                        Spacer(),
                         Text(
                           "See all",
                           style: TextStyle(
@@ -257,147 +220,116 @@ class EcommerceProject1 extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 18),
-                        padding: EdgeInsets.only(top: 20),
+                    SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Container(
+                          //margin: EdgeInsets.only(left: 18),
+                          padding: EdgeInsets.all(10),
 
-                        height: 220,
-                        width: 160,
-                        decoration: BoxDecoration(
-                          color: Color(0xfff4f5f7),
-                          borderRadius: BorderRadius.circular(25),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset('images/bell.png'),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                right: 26,
-                              ),
-                              child: Text(
-                                "Bell papper Red",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 16,
-                                    bottom: 25,
-                                  ),
-                                  child: Text(
-                                    "1KG,4\$",
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 50),
-                                Container(
-                                  height: 36,
-                                  width: 36,
-                                  decoration: BoxDecoration(
-                                    color: Color(0XFF21ab4b),
-
-                                    borderRadius: BorderRadius.circular(18),
-                                  ),
-
-                                  child: Icon(Icons.add, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Row(
+                          height: 220,
+                          width: 176,
+                          decoration: BoxDecoration(
+                            color: Color(0xfff4f5f7),
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          child: Column(
                             children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 18),
-                                padding: EdgeInsets.only(top: 25),
+                              SizedBox(height: 10),
+                              Image.asset('images/bell.png'),
+                              SizedBox(height: 15),
 
-                                height: 220,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfff4f5f7),
-                                  borderRadius: BorderRadius.circular(25),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 30),
+                                child: Text(
+                                  "Bell papper Red",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                                child: Column(
-                                  children: [
-                                    Image.asset('images/LamdMeat.png'),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                        top: 20,
-                                        right: 26,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                          right: 35,
-                                        ),
-                                        child: Text(
-                                          "Lamb Meat",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
+                              ),
+                              SizedBox(height: 4),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 16,
+                                      bottom: 25,
+                                    ),
+
+                                    child: Text(
+                                      "1KG,4\$",
+                                      style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                            left: 12,
-                                            bottom: 25,
-                                          ),
-                                          child: Text(
-                                            "1KG,4\$",
-                                            style: TextStyle(
-                                              color: Colors.red,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(width: 50),
-                                        Container(
-                                          height: 36,
+                                  ),
+                                  SizedBox(width: 30),
+                                  Container(
+                                    height: 36,
+                                    width: 36,
+                                    decoration: BoxDecoration(
+                                      color: Color(0XFF21ab4b),
 
-                                          width: 36,
-                                          decoration: BoxDecoration(
-                                            color: Color(0XFF21ab4b),
-
-                                            borderRadius: BorderRadius.circular(
-                                              18,
-                                            ),
-                                          ),
-
-                                          child: Icon(
-                                            Icons.add,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ],
+                                      borderRadius: BorderRadius.circular(18),
                                     ),
-                                  ],
-                                ),
+
+                                    child: Icon(Icons.add, color: Colors.white),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 18),
+                          padding: EdgeInsets.all(10),
+
+                          height: 220,
+                          width: 176,
+                          decoration: BoxDecoration(
+                            color: Color(0xfff4f5f7),
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Image.asset('images/LamdMeat.png'),
+                              ),
+                              SizedBox(height: 27),
+
+                              Padding(
+                                padding: const EdgeInsets.only(right: 60),
+                                child: Text(
+                                  "Lamb Meat",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "1kg,45\$",
+                                    style: TextStyle(color: Colors.red),
+                                  ),
+                                  SizedBox(width: 50),
+                                  Container(
+                                    height: 35,
+                                    width: 35,
+                                    decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Icon(Icons.add, color: Colors.white),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
