@@ -49,39 +49,35 @@ class EcommerceProject1 extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Row(
+                        Column(
                           children: [
-                            Column(
+                            Row(
                               children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      margin: EdgeInsets.only(left: 120),
-                                      padding: EdgeInsets.all(10),
-                                      height: 42,
-                                      width: 120,
-                                      decoration: BoxDecoration(
-                                        color: Color(0xfffffeff),
-                                        borderRadius: BorderRadius.circular(20),
+                                Container(
+                                  margin: EdgeInsets.only(left: 100),
+                                  padding: EdgeInsets.all(10),
+                                  height: 42,
+                                  width: 120,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xfffffeff),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.location_on,
+                                        color: Colors.green,
                                       ),
-                                      child: Row(
-                                        children: [
-                                          Icon(
-                                            Icons.location_on,
-                                            color: Colors.green,
-                                          ),
-                                          Text(
-                                            "My Flat",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12,
-                                            ),
-                                          ),
-                                          Icon(Icons.arrow_drop_down),
-                                        ],
+                                      Text(
+                                        "My Flat",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                      Icon(Icons.arrow_drop_down),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -224,7 +220,7 @@ class EcommerceProject1 extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          //margin: EdgeInsets.only(left: 18),
+                          //margin: EdgeInsets.only(left:18),
                           padding: EdgeInsets.all(10),
 
                           height: 220,

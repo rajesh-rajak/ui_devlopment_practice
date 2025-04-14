@@ -1,15 +1,33 @@
+import 'package:first_my_project/Appointment_list.dart';
+import 'package:first_my_project/Dr_appoinment.dart';
+import 'package:first_my_project/Dr_date.dart';
+import 'package:first_my_project/Dr_page.dart';
+import 'package:first_my_project/appoinment.dart';
 import 'package:first_my_project/circuler_avtar1.dart';
 import 'package:first_my_project/doctor_page1.dart';
+import 'package:first_my_project/dr_calling.dart';
+import 'package:first_my_project/dr_notification.dart';
 import 'package:first_my_project/dr_ui1.dart';
 import 'package:first_my_project/ecommerce_project1.dart';
 import 'package:first_my_project/fancy_ui.dart';
 import 'package:first_my_project/flutter_ui.dart';
-import 'package:first_my_project/ginder_project.dart';
+import 'package:first_my_project/food_delivery.dart';
+import 'package:first_my_project/food_delivery1.dart';
+import 'package:first_my_project/food_dilivery2.dart';
+import 'package:first_my_project/ginder1.dart';
 import 'package:first_my_project/home_screen.dart';
+import 'package:first_my_project/intropage.dart';
 import 'package:first_my_project/login_ui.dart';
-import 'package:first_my_project/mutual_fund1.dart';
+import 'package:first_my_project/make_appoinment.dart';
+import 'package:first_my_project/moives_picture.dart';
+import 'package:first_my_project/mutual_fund.dart';
+import 'package:first_my_project/playstore.dart';
+
 import 'package:first_my_project/playstore_ui.dart';
 import 'package:first_my_project/practice.dart';
+import 'package:first_my_project/practice_3.dart';
+
+import 'package:first_my_project/profaile_page.dart';
 import 'package:first_my_project/stack_wigets.dart';
 import 'package:first_my_project/text_form.dart';
 import 'package:first_my_project/text_widget1.dart';
@@ -49,7 +67,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:EcommerceProject1(),
+      home:DrDate(),
     );
   }
 }
@@ -88,7 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -103,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
