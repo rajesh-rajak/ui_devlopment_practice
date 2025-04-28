@@ -18,27 +18,39 @@ class DrCalling extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("Wecllcome", style: TextStyle(color: Colors.blueGrey)),
+                    Text(
+                      "Wellcome.",
+                      style: TextStyle(color: Colors.blueGrey, fontSize: 13),
+                    ),
                     Spacer(),
-                    Icon(Icons.notifications_none_sharp, size: 30),
-                    SizedBox(width: 12),
+                    Stack(
+                      children: [
+                        Icon(Icons.notifications_none_sharp, size: 26),
+                        Positioned(
+                          right: 4,
+                          top: 5,
 
+                          child: Icon(Icons.circle, color: Colors.red, size: 8),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 10),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
                         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcAUp8kLUdf0kQr3sDMTcsiXIFSjFumJSQvg&s',
-                        height: 40,
-                        width: 40,
+                        height: 34,
+                        width: 34,
                         fit: BoxFit.cover,
                       ),
                     ),
                   ],
                 ),
                 Text(
-                  'Alexandria Forget!',
+                  'Alexandria Forger!',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                 ),
-                SizedBox(height: 24),
+                SizedBox(height: 30),
                 Container(
                   height: 55,
                   width: double.infinity,
@@ -47,18 +59,16 @@ class DrCalling extends StatelessWidget {
                     color: Color(0xfff9f9f9),
                     borderRadius: BorderRadius.circular(16),
                   ),
+                  
                   child: Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
                         Icon(Icons.search, size: 28, color: Colors.blueGrey),
                         SizedBox(width: 10),
                         Text(
                           "Search doctor, service and drugs...",
-                          style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 15,
-                          ),
+                          style: TextStyle(color: Colors.blueGrey),
                         ),
                       ],
                     ),
@@ -82,8 +92,8 @@ class DrCalling extends StatelessWidget {
 
                 Container(
                   margin: EdgeInsets.only(left: 10),
-                  padding: EdgeInsets.all(16),
-                  height: 160,
+                  padding: EdgeInsets.all(12),
+                  height: 170  ,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -95,47 +105,50 @@ class DrCalling extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Image.network(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8aY6dn-oT-u28BeSudErR8SK0rpCH5tfeyw&s",
-                              height: 60,
-                              width: 60,
-                              fit: BoxFit.cover,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image.network(
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8aY6dn-oT-u28BeSudErR8SK0rpCH5tfeyw&s",
+                                height: 60,
+                                width: 60,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 12),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Dr. Eleanor Pena",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  color: Color(0xffecffff),
+                            SizedBox(width: 12),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Dr. Eleanor Pena",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: Color(0xffecffff),
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                "General Practitioner",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0xffa7bbff),
+                                Text(
+                                  "General Practitioner",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xffa7bbff),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20),
                       Container(
                         padding: EdgeInsets.symmetric(vertical: 10),
-                        height: 45,
+                        height: 48,
                         width: 320,
                         decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.2),

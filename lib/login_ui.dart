@@ -128,11 +128,11 @@ class LoginUi extends StatelessWidget {
                             ],
                           ),
                           Column(
-                            children: [
+                            children:[
                               Row(
                                 children: [
                                   Text("Finance"),
-                                  SizedBox(width: 5),
+                                  SizedBox(width:5),
                                   CircleAvatar(
                                     radius: 2,
                                     backgroundColor: Colors.black,
